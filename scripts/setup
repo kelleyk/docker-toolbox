@@ -12,7 +12,11 @@ apt-get install -yq --no-install-recommends \
         emacs24-nox \
         build-essential autotools-dev autoconf automake libtool gettext \
         cpio squashfs-tools \
-        git
+        git \
+        curl ca-certificates \
+        gawk alien fakeroot zlib1g-dev uuid-dev libattr1-dev libblkid-dev libselinux-dev libudev-dev libdevmapper-dev parted lsscsi ksh
+
+# Last line is for ZFS build, but most of these things are probably useful elsewhere, too.
 
 apt-get autoremove -y
 apt-get clean
